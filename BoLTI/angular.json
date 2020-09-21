@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "BoLTI"
+    }
+  },
+  "defaultProject": "BoLTI",
+  "cli": {
+    "analytics": "14387769-f1cc-4bf8-81f8-fb166a48763b"
+  }
 }
