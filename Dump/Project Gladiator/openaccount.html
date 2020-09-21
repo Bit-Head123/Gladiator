@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>BoLTI || Open Account</title>
+    <link rel="stylesheet" type="text/css" href="signup.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css.map">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    
+</head>
+<style>
+     /* Navbar */
+#navbar {
+  display: flex;
+  position: sticky;
+  top:0;
+  background: #333;
+  color: #fff;
+  justify-content: space-between;
+  z-index: 1;
+  padding: 1rem;
+  height: 40px;
+}
+
+#navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+#navbar ul li a {
+  color: #fff;
+  padding: 0.75rem;
+  margin: 0 0.25rem;
+  text-decoration: none;
+}
+
+#navbar ul li a:hover {
+  background: #93cb52;
+  border-radius: 5px;
+}
+
+#navbar .logo{
+	color:  #fff;
+    padding-bottom: 0.5em;
+}
+
+.logo i{
+	font-size: 1em;
+    color: #93cb52;
+}
+
+#navbar h1{
+  color: #fff;
+  padding: 0.75rem ; 
+  margin: 0 0.25rem;
+  font-size: 1.5em;
+}
+
+.text-primary {
+  color: #93cb52;
+  text-decoration: none;
+}
+
+*{
+        font-family: sans-serif;
+        display: flexbox;
+    }
+    body{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.23),rgba(0, 0, 0, 0.24)) ,url('../Desktop/showcase.jpg');
+        background-size: cover;	 
+       
+    }
+   
+    h1{
+        text-align: center;
+        color:  #fff;
+        font-weight: 50px;
+        font-family: sans-serif;
+        background: #333;
+        border: 1rem;;
+    }
+    h1:hover{
+        color:#93cb52;
+    
+    }
+    .form{
+            
+            max-width: 1000px;
+            background: rgba(30, 80, 55, 0.57);
+            border-radius: 0;
+            box-sizing: border-box ;
+            padding: 40px;
+            margin: auto;
+            color: white;
+            margin-top: 60px;	
+            margin-bottom: 50px;
+    }
+     h3{
+     font-weight: 600;
+     font-style: italic;
+     color: black;
+     background:  #93cb52;
+     padding-top: 10px;
+     height: 40px;
+     width: 300px;
+     text-align: center;
+    }
+    input[type=text],input[type=number],input[type=email]{
+        width: 100%;
+        border-radius: 5px;
+        box-sizing: border-box;
+        background:black;
+        border: none;
+        font-weight: 500;
+        font-size: 16px;
+        outline: none;
+        border-bottom: 1px solid white;
+        margin: 6px;
+        color: white;
+        padding: 12px 5px;
+    }
+    
+    input[type=checkbox]{
+        width: 20px;
+        height: 20px;
+        padding-bottom: 40px;
+    }
+  
+    button{
+        cursor: pointer;
+        width: 200px;
+        margin-top: 25px;
+        margin-left: 3rem;
+        border-radius: 18px;
+        font-size: 25px;
+        background-color:  #93cb52;
+        outline: none;
+        border:none;
+        box-sizing: border-box;
+        padding: 5px;
+        transition-duration:0.4s;
+    }
+    button:hover{
+        background-color: black;
+        color: #93cb52;
+        border: 1px solid  #93cb52;
+    }
+      
+    select{
+        cursor: pointer;
+        width: 120px;
+        margin-top: 15px;
+        margin-left: 10px;
+        font-size: 15px;
+        background-color: #fff;
+        outline: none;
+        border:none;
+        box-sizing: border-box;
+        padding: 5px;
+        transition-duration:0.4s;
+    }
+
+    label{
+        width: 150px;
+        margin-left: 20px;
+        margin-left: 20px;
+        margin-right: 30px;
+        font-size: 20px;
+        outline: none;
+    }
+
+p{
+    font: 1.5em sans-serif;
+}
+</style>
+<body>
+        
+        <nav id="navbar">
+
+            <h1 class="logo">
+                <i class="fas fa-book-open"></i >
+               BoLTI
+            </h1>
+            
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Login</a></li>
+              <li><a href="">Signup</a></li>
+            </ul>
+          </nav>
+    <div class="form">
+        
+        <h1>Open a Savings Account</h1>
+        <br>
+        <h3>Personal Details</h3>
+        <form  class="">
+            <label for="type">First Name</label>&nbsp; &nbsp;
+            <input type="text"  name="First Name"  placeholder="First Name"><br><br>
+
+            <label for="type">Last Name</label>&nbsp &nbsp
+            <input type="text"  name="Last Name"  placeholder="Last Name"><br><br>
+
+            <label for="type">Father's Name</label>&nbsp &nbsp
+            <input type="text"  name="Father's Name"  placeholder="Father's Name"><br><br>
+
+            <label for="type">Email Id</label>&nbsp &nbsp
+            <input type="email"  name="Email-Id"  placeholder="Email-Id"><br><br>
+
+            <label for="type">Aadhar Card</label>&nbsp &nbsp
+            <input type="text"  name="Aadhar Card"  placeholder="Aadhar Card"><br><br><br>
+
+            <label for="type">Date of Birth</label>&nbsp &nbsp
+            <input type="date" name="Date of Birth"  placeholder="Date of Birth"><br><br>
+            <br>
+
+            <h3>Residential Address</h3>
+            <label for="type">Address Line 1</label>&nbsp &nbsp
+            <input type="text"  name="Address"  placeholder="Address"><br><br>
+
+            <label for="type">Adress Line 2</label>&nbsp &nbsp
+            <input type="text"  name="Address"  placeholder="Address"><br><br>
+            
+            <label for="type">Landmark</label>&nbsp &nbsp
+            <input type="text"  name="Landmark"  placeholder="Landmark"><br><br>
+
+            <label for="type">State</label>&nbsp &nbsp
+            <input type="text"  name="State"  placeholder="State"><br><br>
+
+            <label for="type">City</label>&nbsp &nbsp
+            <input type="text"  name="City"  placeholder="City"><br><br>
+
+            <label for="type">Pincode</label>&nbsp &nbsp
+            <input type="number"  name="Pincode"  placeholder="Pincode"><br><br>
+            
+            <p>Permanent address same as Residential address?</p>
+            <input type="checkbox"><br>
+
+            <h3>Permanent Address</h3>
+            <label for="type">Address Line 1</label>&nbsp &nbsp
+            <input type="text"  name="Address"  placeholder="Address"><br><br>
+
+            <label for="type">Address Line 2</label>&nbsp &nbsp
+            <input type="text"  name="Address"  placeholder="Address"><br><br>
+            
+            <label for="type">Landmark</label>&nbsp &nbsp
+            <input type="text"  name="Landmark"  placeholder="Landmark"><br><br>
+
+            <label for="type">State</label>&nbsp &nbsp
+            <input type="text"  name="State"  placeholder="State"><br><br>
+
+            <label for="type">City</label>&nbsp &nbsp
+            <input type="text"  name="City"  placeholder="City"><br><br>
+
+            <label for="type">Pincode</label>&nbsp &nbsp
+            <input type="number"  name="Pincode"  placeholder="Pincode"><br><br>
+            <br>
+
+            <h3>Occupation Details</h3>
+            <label for="type">Occupation Type</label>&nbsp &nbsp
+            <select name="type" id="type">
+                <option value="Student">Student</option>
+                <option value="Student">IT Professional</option>
+                <option value="Student">Government Service</option>
+                <option value="Student">Retired</option>
+            </select>
+            <br><br>
+
+            <label for="type">Source of Income</label>
+            <select name="type" id="type">
+                <option value="Student">Government</option>
+                <option value="Student">Private</option>
+            </select>
+            <br><br>
+
+            <label for="type">Annual Income</label>
+            <select name="number" id="amount">
+                <option value="number"> Less than Rs.1,00,000 </option>
+                <option value="number">Rs.1,00,000-Rs.5,00,000</option>
+                <option value="number">Rs.6,00,000-Rs.10,00,000</option>
+                <option value="number">Greater than Rs.Rs.10,00,000</option>
+            </select><br><br>
+
+            <h3>Debit/ATM Card</h3>
+            <p>Do you want a Debit/ATM Card?</p>
+            <input type="checkbox"> &nbsp Opt for Internet Banking</input><br>
+            <input type="checkbox"> &nbsp I agree</input><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
