@@ -104,10 +104,12 @@
       justify-content: space-between;
       z-index: 1;
       padding: 1rem;
+      height: 80px;
     }
     
     #navbar h1{
-        font-size: 40px;
+        font-size: 30px;
+        padding-top: 5px;
     }
     
     #navbar ul {
@@ -145,7 +147,7 @@
             font-family: sans-serif;
         }
         body{
-            background-image: linear-gradient(rgba(0, 0, 0, 0.23),rgba(0, 0, 0, 0.24)) ,url('../Desktop/istockphoto-924212064-170667a.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.23),rgba(0, 0, 0, 0.24)) ,url('../pexels-maitree-rimthong-1602726.jpg');
             background-size: cover;	 
         }
         .datalist
@@ -166,34 +168,35 @@
             font-weight: 50px;
             font-family: sans-serif;
         }
-        h1:hover{
-            color: white;
-        
-        }
+      
         .form{
                 max-width: 400px;
-                background: rgba(0, 0, 0, .57);
-                border-radius: 0;
+                background: white;
+                border-radius: 15px;
                 box-sizing: border-box ;
+                box-shadow: #333;
                 padding: 40px;
                 margin: auto;
                 color: white;
                 margin-top: 60px;	
                 margin-bottom: 50px;
+                border: 1px solid lightgrey;
         }
         input[type=text],input[type=password]{
             width: 100%;
             border-radius: 5px;
             box-sizing: border-box;
-            background:black;
-            border: none;
+            border: 1px solid lightgrey;
             font-weight: 500;
             font-size: 16px;
             outline: none;
             border-bottom: 1px solid white;
             margin: 6px;
-            color: white;
+            color: black;
             padding: 12px 5px;
+            border: 1px solid lightgrey;
+            border-radius: 25px;
+           transition: all 0.3s ease;
         }
         
         button{
@@ -215,7 +218,10 @@
             color: #93cb52;
             border: 1px solid  #93cb52;
         }
-       
+       .form p{
+         color: black;
+         padding-left: 20px;
+       }
           </style>
         <body>        
         
@@ -236,21 +242,17 @@
                 <h1>Add Beneficiary</h1>
     
                 <form >
-                    <p>Beneficiary Name</p>
+                    <p >Beneficiary Name</p>
                     <input type="text"    placeholder="Full Name"><br>
 
                     <p>Enter Account Number</p>
                     <input type="text"  name="Account_no"  placeholder="Accoutn number"><br>
 
                     <p>Re-enter Account Number</p>
-                    <input type="text"  name="Account_no"  placeholder="Re-enter Account Number"><br>
+                    <input type="text"  name="Account_no"  placeholder="Re-enter Account Number"><br><br>
 
-                    <p>Add Nick Name</p>
-                    <input type="text"  name="nickname"  placeholder="Nick Name"><br><br>
-
-                    
-                    <input type="checkbox"  name="phone"  placeholder="Add">&nbsp &nbsp
-                    <label for="type">Add Beneficiary</label>
+                    <input type="checkbox"  name="phone"  placeholder="Add" >&nbsp &nbsp
+                    <label for="type" style="color: black;">Add Beneficiary</label>
 
     
                     <button type=submit>Submit</button>

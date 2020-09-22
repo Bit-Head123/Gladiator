@@ -18,7 +18,9 @@
          padding:0;
          box-sizing: border-box;
        }
-       
+       body{
+         background-color: cornsilk;
+       }
        /* Main Styling */
        html,body {
          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -55,14 +57,14 @@
         width: 50%;
         border-radius: 5px;
         box-sizing: border-box;
-        background-color: rgb(172, 208, 248);
-        border: none;
+        border: 1px solid lightgrey;
+        border-radius: 20px;
         font-weight: 500;
         font-size: 16px;
         outline: none;
         border-bottom: 1px solid white;
         margin: 6px;
-        color: white;
+        color: black;
         padding: 12px 5px;
     }
     
@@ -102,7 +104,7 @@
     </style>
     <body>
     
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse" style="height: 80px; padding-top: 10px;">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -111,7 +113,8 @@
             <span class="icon-bar"></span>                        
           </button>
           
-          <a class="navbar-brand" href="#" style="color: #93cb52;"><i class="fas fa-book-open">&nbsp;&nbsp;</i >BoLTI</a>
+          <a class="navbar-brand" href="#" style="color: white; font-size: 30px ; font-weight: 750;"><i class="fas fa-book-open"  style="color: #93cb52;">
+            &nbsp;&nbsp;</i >BoLTI</a>
           
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
@@ -162,9 +165,7 @@
             <label for="pwd">Enter OTP</label>
             <input type="password" class="form-control" id="pwd" placeholder="Enter OTP" name="pwd">
           </div>
-        <div class="checkbox">
-          <label><input type="checkbox" name="remember"> Remember me</label>
-        </div>
+       
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       
