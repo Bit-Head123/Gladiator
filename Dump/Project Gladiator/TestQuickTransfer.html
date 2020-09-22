@@ -1,0 +1,310 @@
+
+<body>
+    <!-- partial:index.partial.html -->
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>BoLTI || Add Beneficiary</title>
+            <link rel="stylesheet" type="text/css" href="signup.css">
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css">
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js">
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css">
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css.map">
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+     
+        </head>
+    
+        <!-- partial -->
+      <style>
+    
+        * {
+             margin: 0;
+             padding:0;
+             box-sizing: border-box;
+           }
+           
+           /* Main Styling */
+           html,body {
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             line-height: 1.7em;
+             
+           }
+           
+           a {
+             color: #333;
+             text-decoration: none;
+           }
+           
+           h1, h2, h3 {
+             padding-bottom: 20px;
+           }
+           
+           p {
+             margin: 10px 0;
+           }
+        
+           .container {
+            margin: auto;
+            max-width: 1200px;
+            overflow: auto;
+            padding: 0 20px;
+          }
+           .text-primary {
+               color:  #93cb52;
+           }
+           
+         .lead{
+             font-size: 20px;
+         }
+         
+         .btn{
+             display: inline-block;
+             font-size: 18px;
+             color: #fff;
+             background: #333;
+             padding: 13px 20px;
+             border: none;
+             cursor: pointer;
+         }
+         
+         .btn:hover {
+             background:  #93cb52 ;
+             color: #333;
+         }
+         .btn-light {
+             background: #f4f4f4;
+             color: #333;
+           }
+           
+          
+           .bg-light {
+             background: #f7c08a;
+             color: #333;
+           }
+           
+           .bg-primary {
+             background: #93cb52;
+             color: #333;
+           }
+           
+           .clr {
+             clear: both;
+           }
+         
+        
+          /* Navbar */
+    #navbar {
+      display: flex;
+      position: sticky;
+      top:0;
+      background: #333;
+      color: #fff;
+      justify-content: space-between;
+      z-index: 1;
+      padding: 1rem;
+    }
+    
+    #navbar h1{
+        font-size: 40px;
+    }
+    
+    #navbar ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+    
+    #navbar ul li a {
+      color: #fff;
+      padding: 0.75rem;
+      margin: 0 0.25rem;
+    }
+    
+    #navbar ul li a:hover {
+      background: #93cb52;
+      border-radius: 5px;
+    }
+    
+    #navbar .logo{
+        color:  #fff;
+    }
+    
+    .logo i{
+        size: 20px;
+        color: #93cb52;
+    }
+    
+    .text-primary {
+      color: #93cb52;
+      text-decoration: none;
+    }
+            
+              *{
+            font-family: sans-serif;
+        }
+        body{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.23),rgba(0, 0, 0, 0.24)) ,url('../Desktop/istockphoto-924212064-170667a.jpg');
+            background-size: cover;	 
+        }
+        .datalist
+        {
+        background-color: black;
+        color:white;	
+        }
+        .aclk{
+            color:   #93cb52;
+            text-decoration: none;
+        }
+        .aclk:hover{
+            color:green ;
+        }
+        h1{
+            text-align: center;
+            color:  #93cb52;
+            font-weight: 50px;
+            font-family: sans-serif;
+        }
+        h1:hover{
+            color: white;
+        
+        }
+        .form{
+                max-width: 400px;
+                background: rgba(0, 0, 0, .57);
+                border-radius: 0;
+                box-sizing: border-box ;
+                padding: 40px;
+                margin: auto;
+                color: white;
+                margin-top: 60px;	
+                margin-bottom: 50px;
+        }
+        input[type=text],input[type=password],input[type=number],input[type=date]{ 
+            width: 100%;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background:white;
+            border: none;
+            font-weight: 500;
+            font-size: 16px;
+            outline: none;
+            border-bottom: 1px solid white;
+            margin: 6px;
+            color: black;
+            padding: 12px 5px;
+        }
+        
+        button{
+            cursor: pointer;
+            width: 200px;
+            margin-top: 25px;
+            margin-left: 60px;
+            border-radius: 18px;
+            font-size: 25px;
+            background-color:  #93cb52;
+            outline: none;
+            border:none;
+            box-sizing: border-box;
+            padding: 5px;
+            transition-duration:0.4s;
+        }
+        button:hover{
+            background-color: black;
+            color: #93cb52;
+            border: 1px solid  #93cb52;
+        }
+       
+          </style>
+        <body>        
+        
+                <nav id="navbar">
+                      <h1 class="logo">
+                        <i class="fas fa-book-open"></i >
+                       BoLTI
+                    </h1>
+                    
+                    <ul>
+                      <li><a href="">Dashboard</a></li>
+                      <li><a href="">Profile</a></li>
+                      <li><a href="">Logout</a></li>
+                    </ul>
+                  </nav>
+            <div class="form">
+                
+                <h1>Transfer Money</h1>
+    
+                <form >
+                    <p>Beneficiary Name</p>
+                    <input type="text"    placeholder="Full Name"><br>
+
+                    <p>To Account :</p>
+                    <input type="password"  name="Account_no"  placeholder="Account number"><br>
+
+					<p>Re-enter Account Number</p>
+                    <input type="text"  name="Account_no"  placeholder="Re-enter Account Number"><br>
+					
+                    <p>Amount ( ₹ )</p>
+                    <input type="text"  name="Account_no"  placeholder="Enter Amount"><br>
+
+                    <p>Transaction Date</p>
+                    <input type="date"  name="nickname"  placeholder="Nick Name"><br><br>
+
+                    <p>Remarks</p>
+                    <input type="text"  name="nickname"  placeholder="Remarks"><br><br> 
+					
+                    <p>Select mode of transfer</p>
+					<input type="radio" id="neft" name="paymentMethod" value="neft">
+					<label for="male">NEFT</label><br>
+					<input type="radio" id="rtgs" name="paymentMethod" value="rtgs">
+					<label for="female">RTGS</label><br>
+					<input type="radio" id="imps" name="paymentMethod" value="imps">
+					<label for="other">IMPS</label>
+    
+                    <button type=submit>Submit</button>
+                </form>
+            </div>
+			<div class="form">
+                    
+                <h1>Transfer Money</h1>
+    
+                <form>
+				<table>
+				<tr>
+                  <td><p>Beneficiary Name</p>
+                    <input type="text"    placeholder="Full Name"><br></td>
+
+                    <td>
+				</tr>
+				<tr><td>
+                  <p>To Account :</p>
+                    <input type="password"  name="Account_no"  placeholder="Account number"><br></td>
+
+					<td><p>Re-A Number</p>
+                    <input type="text"  name="Account_no"  placeholder="Re-enter Account Number"><br></td>
+				</tr>
+				<tr><td>
+				<p>Amount ( ₹ )</p>
+                    <input type="text"  name="Account_no"  placeholder="Enter Amount"><br></td>
+
+                    <td><p>Transaction Date</p>
+                    <input type="date"  name="nickname"  placeholder="Nick Name"><br></td>
+				</tr> 
+				<tr>
+				 <td>
+				   <p>Remarks</p>
+                    <input type="text"  name="nickname"  placeholder="Remarks"><br><br> 
+				 </td>
+				</tr>
+				</table> 
+					
+
+    
+                    <button type=submit>Submit</button>
+                </form>
+            </div>
+        </body>
+    </html>
+    
+    
