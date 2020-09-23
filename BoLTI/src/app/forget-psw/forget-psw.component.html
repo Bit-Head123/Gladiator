@@ -1,15 +1,4 @@
 
-<!DOCTYPE html>
-<!-- Created By CodingPen -->
-<html lang="en" dir="ltr">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
- 
-  <head>
-    <meta charset="utf-8">
-    <title>BoLTI | forgot Password</title>
-  </head>
-  <body>
-    
     <div class="wrapper">
       <div class="title">
 Forgot Password?</div>
@@ -23,15 +12,18 @@ Forgot Password?</div>
           <label>Enter OTP</label>
         </div>
     
+        <p>{{otp}}</p>
+        <div class="field-submit">
+                <button type="submit" value="Proceed" (click)="submitted()">Proceed</button>
+              </div>   
+    
     <div class="field">
-            <input type="submit" value="Proceed">
-          </div>   
-
-<div class="field">
-          <input type="submit" value="Back">
-        </div>
-
+              <input type="button"value="Back" (click)="btnClick()" >
+            </div>
+            <div class="field">
+              <input type="button" (click)="myFunction()" value="Send OTP">
+            </div>   
+    
 </form>
 </div>
-</body>
-</html>
+
