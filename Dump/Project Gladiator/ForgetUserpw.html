@@ -7,6 +7,16 @@
     <meta charset="utf-8">
     <title>BoLTI | forgot ID</title>
   </head>
+  <script>
+    function myFunction() {
+  var x = document.getElementById("message");
+  if (x.innerHTML === "") {
+    x.innerHTML = "OTP has been sent to your registered mobile number";
+  } else {
+    x.innerHTML = "";
+  }
+}
+</script>
   <body>
     <nav id="navbar">
         <h1 class="logo">
@@ -32,9 +42,10 @@ Forgot User-ID?</div>
           <input type="text" required>
           <label>Enter OTP</label>
         </div>
+        <p id="message"></p>
     
     <div class="field">
-            <input type="submit" value="Proceed">
+            <input type="submit" value="Proceed" onclick="myFunction()">
           </div>   
 
 <div class="field">

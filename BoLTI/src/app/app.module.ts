@@ -9,6 +9,8 @@ import { FundstransferComponent } from './fundstransfer/fundstransfer.component'
 import { AddbeneficiaryComponent } from './addbeneficiary/addbeneficiary.component';
 import { QuicktransferComponent } from './quicktransfer/quicktransfer.component';
 import { TxnsummaryComponent } from './txnsummary/txnsummary.component';
+import { HomeComponent } from './home/home.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { TxnsummaryComponent } from './txnsummary/txnsummary.component';
     FundstransferComponent,
     AddbeneficiaryComponent,
     QuicktransferComponent,
-    TxnsummaryComponent
+    TxnsummaryComponent,
+    HomeComponent,
+    NavMenuComponent
   ],
   imports: [
     BrowserModule,
