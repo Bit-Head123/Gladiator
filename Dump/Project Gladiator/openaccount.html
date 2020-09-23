@@ -74,8 +74,10 @@
         display: flexbox;
     }
     body{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.23),rgba(0, 0, 0, 0.24)) ,url('../Desktop/showcase.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.23),rgba(0, 0, 0, 0.24)) ,url('../Project Gladiator/pexels-guilherme-rossi-1755693.jpg') ;
         background-size: cover;	 
+        opacity: 0.9;
+        
        
     }
    
@@ -94,8 +96,9 @@
     .form{
             
             max-width: 1000px;
-            background: rgba(30, 80, 55, 0.57);
+            background: white;
             border-radius: 0;
+            border-radius: 3px;
             box-sizing: border-box ;
             padding: 40px;
             margin: auto;
@@ -114,17 +117,17 @@
      text-align: center;
     }
     input[type=text],input[type=number],input[type=email]{
-        width: 100%;
+        width: 50%;
         border-radius: 5px;
         box-sizing: border-box;
-        background:black;
-        border: none;
+        border: 1px solid lightgrey;
+        border-radius: 20px;
         font-weight: 500;
         font-size: 16px;
         outline: none;
         border-bottom: 1px solid white;
         margin: 6px;
-        color: white;
+        color: black;
         padding: 12px 5px;
     }
     
@@ -132,6 +135,7 @@
         width: 20px;
         height: 20px;
         padding-bottom: 40px;
+        color: black;
     }
   
     button{
@@ -175,10 +179,12 @@
         margin-right: 30px;
         font-size: 20px;
         outline: none;
+        color: black;
     }
 
 p{
     font: 1.5em sans-serif;
+    color: black;
 }
 </style>
 <body>
@@ -202,70 +208,200 @@ p{
         <br>
         <h3>Personal Details</h3>
         <form  class="">
-            <label for="type">First Name</label>&nbsp; &nbsp;
+            <label for="uname">First Name</label>&nbsp; &nbsp;
             <input type="text"  name="First Name"  placeholder="First Name"><br><br>
 
-            <label for="type">Last Name</label>&nbsp &nbsp
+            <label for="uname">Last Name</label>&nbsp &nbsp
             <input type="text"  name="Last Name"  placeholder="Last Name"><br><br>
 
             <label for="type">Father's Name</label>&nbsp &nbsp
             <input type="text"  name="Father's Name"  placeholder="Father's Name"><br><br>
 
-            <label for="type">Email Id</label>&nbsp &nbsp
-            <input type="email"  name="Email-Id"  placeholder="Email-Id"><br><br>
+            <label for="email">Email Id</label>&nbsp &nbsp
+            <input type='text' placeholder="email" id='txtEmail'/>
+           <br><br>
 
-            <label for="type">Aadhar Card</label>&nbsp &nbsp
-            <input type="text"  name="Aadhar Card"  placeholder="Aadhar Card"><br><br><br>
+            <label for="aid">Aadhar Card</label>&nbsp &nbsp
+            <input type="text" id="txtAadhar" onblur="AadharValidate();" placeholder="Aadhar Card" />
+            <script type="text/javascript">
+                function AadharValidate() {
+                    var aadhar = document.getElementById("txtAadhar").value;
+                    var adharcardTwelveDigit = /^\d{12}$/;
+                    var adharSixteenDigit = /^\d{16}$/;
+                    if (aadhar != '') {
+                        if (aadhar.match(adharcardTwelveDigit)) {
+                            return true;
+                        }
+                        else if (aadhar.match(adharSixteenDigit)) {
+                            return true;
+                        }
+                        else {
+                            alert("Enter valid Aadhar Number");
+                            return false;
+                        }
+                    }
+                }
+            </script>
+            <br><br>
 
-            <label for="type">Date of Birth</label>&nbsp &nbsp
-            <input type="date" name="Date of Birth"  placeholder="Date of Birth"><br><br>
+            <label for="dob">Date of Birth</label>&nbsp &nbsp
+            <input type="date" id="DOB" name="Date of Birth"  placeholder="Date of Birth">
+            <script type="text/javascript">
+                        var res = document.getElementById("DOB").value;
+         
+                        if (res<18 || res > 100 )
+                            alert("Enter Age >18");
+         
+           
+            </script>
+            <br><br>
             <br>
 
             <h3>Residential Address</h3>
-            <label for="type">Address Line 1</label>&nbsp &nbsp
-            <input type="text"  name="Address"  placeholder="Address"><br><br>
+            <label for="address">Address Line 1</label>&nbsp &nbsp
+            <input type="text" id="ad" name="Address"  placeholder="Address"><br><br>
 
-            <label for="type">Adress Line 2</label>&nbsp &nbsp
-            <input type="text"  name="Address"  placeholder="Address"><br><br>
+            <label for="address">Adress Line 2</label>&nbsp &nbsp
+            <input type="text" id="add" name="Address"  placeholder="Address"><br><br>
             
             <label for="type">Landmark</label>&nbsp &nbsp
-            <input type="text"  name="Landmark"  placeholder="Landmark"><br><br>
+            <input type="text" id="lad" name="Landmark"  placeholder="Landmark"><br><br>
 
-            <label for="type">State</label>&nbsp &nbsp
-            <input type="text"  name="State"  placeholder="State"><br><br>
-
-            <label for="type">City</label>&nbsp &nbsp
-            <input type="text"  name="City"  placeholder="City"><br><br>
+           
+            <script type="text/javascript">
+                var citiesByState = {
+                Odisha: ["Bhubaneswar","Puri","Cuttack"],
+                Maharashtra: ["Mumbai","Pune","Nagpur"],
+                Kerala: ["kochi","Kanpur"]
+                }
+                function makeSubmenu(value) {
+                if(value.length==0) document.getElementById("citySelect").innerHTML = "<option></option>";
+                else {
+                var citiesOptions = "";
+                for(cityId in citiesByState[value]) {
+                citiesOptions+="<option>"+citiesByState[value][cityId]+"</option>";
+                }
+                document.getElementById("citySelect").innerHTML = citiesOptions;
+                }
+                }
+                function displaySelected() { var country = document.getElementById("countrySelect").value;
+                var city = document.getElementById("citySelect").value;
+                alert(country+"\n"+city);
+                }
+                function resetSelection() {
+                document.getElementById("countrySelect").selectedIndex = 0;
+                document.getElementById("citySelect").selectedIndex = 0;
+                }
+                </script>
+                
+                <body onload="resetSelection()">
+                <label for="type">Select State</label>&nbsp &nbsp
+                <select id="countrySelect" size="1" onchange="makeSubmenu(this.value)" style="color: black; background-color: #93cb52;">
+                <option value="" disabled selected>Choose State</option>
+                <option>Odisha</option>
+                <option>Maharashtra</option>
+                <option>Kerala</option>
+                </select><br><br>
+                <label for="type" >Select City &nbsp;</label>&nbsp &nbsp
+                <select id="citySelect" size="1" style="color: black; background-color: #93cb52;" >
+                <option value="" disabled selected>Choose City</option>
+                <option></option>
+                </select><br><br><br>
 
             <label for="type">Pincode</label>&nbsp &nbsp
-            <input type="number"  name="Pincode"  placeholder="Pincode"><br><br>
+            <input type="number" id="pic" name="Pincode"  placeholder="Pincode"><br><br>
             
-            <p>Permanent address same as Residential address?</p>
-            <input type="checkbox"><br>
+            
+            <input type="checkbox" value="" name="filltoo" id="filltoo" onclick="filladd()" />
+            <label>Permanent Address same as Residential address</label>  <br><br/>
+            <script>
+                function filladd()
+{
+	                 if(filltoo.checked == true) 
+                        {
+             var ad1 =document.getElementById("ad").value;
+			 var ad2 =document.getElementById("add").value;
+			 var pc =document.getElementById("pic").value;
+             var ld =document.getElementById("lad").value;
+
+           
+            var copyad = ad1 ;
+            var copyadd = ad2 ;
+            var copypic = pc ;
+            var copylad = ld;
+            
+            document.getElementById("ad1").value = copyad;
+            document.getElementById("ad2").value = copyadd;
+            document.getElementById("pc").value = copypic;
+            document.getElementById("ld").value = copylad;
+	 }
+	 else if(filltoo.checked == false)
+	 {
+		 document.getElementById("ad1").value='';
+		 document.getElementById("ad2").value='';
+		 document.getElementById("pc").value='';
+         document.getElementById("ld").value='';
+	 }
+}
+            </script>
 
             <h3>Permanent Address</h3>
             <label for="type">Address Line 1</label>&nbsp &nbsp
-            <input type="text"  name="Address"  placeholder="Address"><br><br>
+            <input type="text" id="ad1" name="Address"  placeholder="Address"><br><br>
 
             <label for="type">Address Line 2</label>&nbsp &nbsp
-            <input type="text"  name="Address"  placeholder="Address"><br><br>
+            <input type="text" id="ad2" name="Address"  placeholder="Address"><br><br>
             
             <label for="type">Landmark</label>&nbsp &nbsp
-            <input type="text"  name="Landmark"  placeholder="Landmark"><br><br>
+            <input type="text" id="ld" name="Landmark"  placeholder="Landmark"><br><br>
 
-            <label for="type">State</label>&nbsp &nbsp
-            <input type="text"  name="State"  placeholder="State"><br><br>
-
-            <label for="type">City</label>&nbsp &nbsp
-            <input type="text"  name="City"  placeholder="City"><br><br>
+            <script type="text/javascript">
+                var citiesByState = {
+                Odisha: ["Bhubaneswar","Puri","Cuttack"],
+                Maharashtra: ["Mumbai","Pune","Nagpur"],
+                Kerala: ["kochi","Kanpur"]
+                }
+                function makeSubmenu(value) {
+                if(value.length==0) document.getElementById("citySelect").innerHTML = "<option></option>";
+                else {
+                var citiesOptions = "";
+                for(cityId in citiesByState[value]) {
+                citiesOptions+="<option>"+citiesByState[value][cityId]+"</option>";
+                }
+                document.getElementById("citySelect").innerHTML = citiesOptions;
+                }
+                }
+                function displaySelected() { var country = document.getElementById("countrySelect").value;
+                var city = document.getElementById("citySelect").value;
+                alert(country+"\n"+city);
+                }
+                function resetSelection() {
+                document.getElementById("countrySelect").selectedIndex = 0;
+                document.getElementById("citySelect").selectedIndex = 0;
+                }
+                </script>
+                
+                <body onload="resetSelection()">
+                <label for="type">Select State</label>&nbsp &nbsp
+                <select id="countrySelect" size="1" onchange="makeSubmenu(this.value)" style="color: black; background-color: #93cb52;">
+                <option value="" disabled selected>Choose State</option>
+                <option>Odisha</option>
+                <option>Maharashtra</option>
+                <option>Kerala</option>
+                </select><br><br>
+                <label for="type">Select City &nbsp;</label>&nbsp &nbsp
+                <select id="citySelect" size="1" style="color: black; background-color: #93cb52;" >
+                <option value="" disabled selected>Choose City</option>
+                <option></option>
+                </select><br><br><br>
 
             <label for="type">Pincode</label>&nbsp &nbsp
-            <input type="number"  name="Pincode"  placeholder="Pincode"><br><br>
+            <input type="number" id="pc" name="Pincode"  placeholder="Pincode"><br><br>
             <br>
 
             <h3>Occupation Details</h3>
             <label for="type">Occupation Type</label>&nbsp &nbsp
-            <select name="type" id="type">
+            <select name="type" id="type" style="color: black; background-color: #93cb52;">
                 <option value="Student">Student</option>
                 <option value="Student">IT Professional</option>
                 <option value="Student">Government Service</option>
@@ -274,14 +410,14 @@ p{
             <br><br>
 
             <label for="type">Source of Income</label>
-            <select name="type" id="type">
+            <select name="type" id="type" style="color: black; background-color: #93cb52;">
                 <option value="Student">Government</option>
                 <option value="Student">Private</option>
             </select>
             <br><br>
 
             <label for="type">Annual Income</label>
-            <select name="number" id="amount">
+            <select name="number" id="amount" style="color: black; background-color: #93cb52;">
                 <option value="number"> Less than Rs.1,00,000 </option>
                 <option value="number">Rs.1,00,000-Rs.5,00,000</option>
                 <option value="number">Rs.6,00,000-Rs.10,00,000</option>
@@ -290,11 +426,12 @@ p{
 
             <h3>Debit/ATM Card</h3>
             <p>Do you want a Debit/ATM Card?</p>
-            <input type="checkbox"> &nbsp Opt for Internet Banking</input><br>
-            <input type="checkbox"> &nbsp I agree</input><br><br>
+            <input type="checkbox"> </input><label style="color: black;">Opt for Credit card</label><br>
+            <input type="checkbox" ></input><label style="color: black;"> I agree</label><br><br>
 
-            <button type="submit">Submit</button>
+            <button type="submit" id="#Button1">Submit</button>
         </form>
     </div>
 </body>
+
 </html>
