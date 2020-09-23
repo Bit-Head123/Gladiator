@@ -9,6 +9,9 @@ import { FundstransferComponent } from './fundstransfer/fundstransfer.component'
 import { AddbeneficiaryComponent } from './addbeneficiary/addbeneficiary.component';
 import { QuicktransferComponent } from './quicktransfer/quicktransfer.component';
 import { TxnsummaryComponent } from './txnsummary/txnsummary.component';
+import { OpenAccountComponent } from './open-account/open-account.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { TxnsummaryComponent } from './txnsummary/txnsummary.component';
     FundstransferComponent,
     AddbeneficiaryComponent,
     QuicktransferComponent,
-    TxnsummaryComponent
+    TxnsummaryComponent,
+    OpenAccountComponent,
+    DashboardComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
