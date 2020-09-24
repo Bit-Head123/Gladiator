@@ -12,6 +12,8 @@ import { TxnsummaryComponent } from './txnsummary/txnsummary.component';
 import { HomeComponent } from './home/home.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { SetpswComponent } from './setpsw/setpsw.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { AccountStatementsComponent } from './account-statements/account-statements.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { SetpswComponent } from './setpsw/setpsw.component';
     TxnsummaryComponent,
     HomeComponent,
     NavMenuComponent,
-    SetpswComponent
+    SetpswComponent,
+    AccountDetailsComponent,
+    AccountStatementsComponent
   ],
   imports: [
     BrowserModule,

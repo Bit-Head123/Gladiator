@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Account Statement</title>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <strong><span>Available Balance: &#x20b9;</span><span> 15000</span></strong><br><br>
+    <div>
+        <span style="font-size: 2em;"> Transaction History</span>
+        <span class="from">
+        <label for="start">From :  </label>
+        <input type="date" id="start" name="tran-start"
+        value="dd-mm-yyyy"
+        min="2019-01-01" max="2020-09-19">
+      </span>
+      <span class="to">
+        <label for="end">To :  </label>
+        <input type="date" id="end" name="tran-end"
+        value="dd-mm-yyyy"
+        min="2019-01-01" max="2020-09-19">
+      </span>
+      <br><br>
+    </div>
+    
+  </header>
+  <div class="wrapper">
+    <table>
+      <thead>
+        <tr style="text-align: center;">
+          <th class="date"><div>Date</div> (dd/mm/yyyy)</th>
+          <th class="transaction"><div>Transaction</div> Amount ( &#x20b9; ) </th>
+          <th class="details">Details</th>
+          <th class="trnsaction id">Transaction Id</th>
+          <th class="amount">Amount</th>
+      </thead>
+      <tbody id="transData">
+        <tr>
+          <td class="date"><span class="fontawesome-calendar">19/09/2020</span></td>
+          <td class="transaction"><span class="fontawesome-money">+ &#x20b9; 5000 </span></td>
+          <td class="details"><span class="fontawesome-map-marker">ICICI/Arnab</span></td>
+          <td class="transaction id"><span class="fontawesome-wrench">123456789</span></td>
+          <td class="amount"><span class="fontawesome-money"> &#x20b9; 10000 </span></td>
+        </tr>
+        <tr>
+          <td class="date"><span class="fontawesome-calendar">17/09/2020</span></td>
+          <td class="transaction"><span class="fontawesome-money">- &#x20b9; 7000 </span></td>
+          <td class="details"><span class="fontawesome-map-marker">HDFC/Mitshu</span></td>
+          <td class="transaction id"><span class="fontawesome-wrench">12457896</span></td>
+          <td class="transaction"><span class="fontawesome-money"> &#x20b9; 17000 </span></td>
+        </tr>
+        <tr>
+          <td class="date"><span class="fontawesome-calendar">14/09/2020</span></td>
+          <td class="transaction"><span class="fontawesome-money">+ &#x20b9; 12000 </span></td>
+          <td class="details"><span class="fontawesome-map-marker">ICICI/Tushar</span></td>
+          <td class="transaction id"><span class="fontawesome-wrench">12345457</span></td>
+          <td class="transaction"><span class="fontawesome-money"> &#x20b9; 5000 </span></td>
+        </tr>
+        <tr>
+          <td class="date"><span class="fontawesome-calendar">12/09/2020</span></td>
+          <td class="transaction"><span class="fontawesome-money">- &#x20b9; 6500 </span></td>
+          <td class="details"><span class="fontawesome-map-marker">SBI/Abhinav</span></td>
+          <td class="transaction id"><span class="fontawesome-wrench">123451254</span></td>
+          <td class="transaction"><span class="fontawesome-money"> &#x20b9; 11500 </span></td>
+        </tr>
+      
+       
+      </tbody>
+    </table>
+  </div>
+</div>
+  
+</body>
+</html>
