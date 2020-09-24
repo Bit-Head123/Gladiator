@@ -1,0 +1,30 @@
+
+body {
+font: 16px/22px Helvetica, Arial, sans-serif;
+color: #212121;
+}
+table#crunchFeaturesTable tbody td, table#crunchFeaturesTable tbody th {
+padding: 10px; text-align: left;
+}
+table#crunchFeaturesTable tbody tr:nth-child(odd) td {
+background: #f1fff1;
+}
+table#crunchFeaturesTable tbody tr:nth-child(even) td {
+background: #fff;
+}
+table#crunchFeaturesTable {
+width: 1000px;
+}
+
+span.bullet{ 
+font-size: 1.8em; display: inline-block; ;
+vertical-align: bottom;
+}
+td.title{font-weight: bold;}
+
+.blue{color: #00a9c5;}
+.pink{color: #d93869;}
+.orange{color: #faac2a;}
+.green{color: #b8d438;}
+.alice{color: #cc5a2d;}
+.black{color: #5b0b91;}
