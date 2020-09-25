@@ -1,4 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-open-account',
@@ -6,8 +7,11 @@ import { Component, Inject, OnInit } from '@angular/core';
   styleUrls: ['./open-account.component.css']
 })
 export class OpenAccountComponent implements OnInit {
+   
 
-  constructor() { }
+  constructor(@Inject(DOCUMENT) document){
+     
+   }
 
   ngOnInit(): void {
   }

@@ -16,7 +16,7 @@ password: String;
 
   dashboard()
   {
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/dashboard2']);
   }
 
 }

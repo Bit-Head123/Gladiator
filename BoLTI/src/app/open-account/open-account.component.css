@@ -55,7 +55,8 @@
           display: flexbox;
       }
       body{
-          background-image: linear-gradient(rgba(0, 0, 0, 0.23),rgba(0, 0, 0, 0.24)) ,url('../../assets/pexels-guilherme-rossi-1755693.jpg') ;
+          background-image: linear-gradient(rgba(0, 0, 0, 0.23),rgba(0, 0, 0, 0.24));
+          background-image: url('../../assets/pexels-guilherme-rossi-1755693.jpg');
           background-size: cover;	 
           opacity: 0.9;
           
