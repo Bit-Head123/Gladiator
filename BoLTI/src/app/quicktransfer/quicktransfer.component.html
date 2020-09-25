@@ -1,1 +1,44 @@
-<p>quicktransfer works!</p>
+<h6>QuickTransfer starts here</h6>
+
+  <div class="card" style="width:80%;margin:auto;">
+  <div class="card-header bf" >
+    Transfer money 
+  </div>
+  <div class="card-body">
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Beneficiary Name</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Enter Beneficiary Name">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Amount ( ₹ )</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Enter Beneficiary Name">
+      </div>
+    </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Bank Name</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Enter Bank Name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Bank Branch</label> 
+      <input type="text" class="form-control" id="inputPassword4" placeholder="Enter Bank Branch">
+    </div>
+  </div> 
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Account Number</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Account Number">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Remarks</label>
+      <input type="text" class="form-control" id="inputPassword4" placeholder="Mention Remarks">
+    </div>
+  </div>
+  
+  <button type="submit" [routerLink]="['txnsummary']" class="btn bf">Confirm Payment</button>
+</form>
+
+</div>
+</div>

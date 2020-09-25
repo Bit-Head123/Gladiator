@@ -1,0 +1,56 @@
+
+
+
+  <h6>Fundstransfer starts here</h6>
+  <div class="card" style="margin:20px;">
+    <div class="card-body">
+      <p class="card-text">Is someone missing in your list?</p>
+      <a [routerLink]='["addbeneficiary"]' class="btn bf" >Add new Beneficiary</a>
+    </div>
+  </div>
+  
+<br>
+<div class="table-responsive" style="width:80%;margin:auto;">
+  <table class="table table-sm table-hover">
+    <thead class="bf">
+      <tr>
+        <th scope="col">Sr.no</th>
+        <th scope="col">Beneficiary Name</th>
+        <th scope="col">Account Number</th>
+        <th scope="col">Bank Name</th>
+        <th scope="col">IFSC</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><input type="radio" name="select"></th>
+        <td>Abhinav Anand</td>
+        <td>20897786543</td>
+        <td>State Bank of India</td>
+        <td>SBIN00012345</td>
+      </tr>
+      <tr>
+        <th scope="row"><input type="radio" name="select"></th>
+        <td>Mitshu Ghosh</td>
+        <td>20897786543</td>
+        <td>Kotak Mahindra Bank</td>
+        <td>KTK00012345</td>
+      </tr>
+      <tr>
+        <th scope="row"><input type="radio" name="select"></th>
+        <td>Arnab Choudhuri</td>
+        <td>20897786543</td>
+        <td>HDFC Bank</td>
+        <td>SBIN00012345</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <a [routerLink]='["quicktransfer"]' style="margin:10px;" href="#" class="btn bf">Send Money</a>
+  <a href="#" class="btn bf">Edit</a>
+
+</div>
+
+<div>
+
+<br>

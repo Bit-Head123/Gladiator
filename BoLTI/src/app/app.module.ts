@@ -40,7 +40,7 @@ import { OpenAccountComponent } from '../app/open-account/open-account.component
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey:'AIzaSyDoZg2Es_GrQHZf_52j2-xZ3cTfBCR0HII'
-    })
+    }) 
   ],
   providers: [],
   bootstrap: [AppComponent]
