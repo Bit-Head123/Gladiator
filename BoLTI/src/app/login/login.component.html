@@ -2,7 +2,7 @@
 <div class="wrapper">
 <div class="title">
 Login Form</div>
-<form class="" action="#">
+<form class="" action="">
   <div class="field">
     <input type="text" required>
     <label>Email Address</label>
@@ -22,7 +22,7 @@ Login Form</div>
   <a [routerLink]='["/forgetuserid"]'>Forgot UserId?</a></div>
 </div>
 <div class="field">
-    <input type="submit" value="Login">
+    <input type="submit" value="Login" (click)="dashboard()">
   </div>
 <div class="signup-link">
 Not a member? <a href="#">Signup now</a></div>

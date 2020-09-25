@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-open-account',
@@ -11,5 +11,6 @@ export class OpenAccountComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+   
 }
+

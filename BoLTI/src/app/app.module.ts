@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AccountSummaryComponent } from './account-summary/account-summary.component';
 import { LoginComponent } from './login/login.component';
 import { FundstransferComponent } from './fundstransfer/fundstransfer.component';
 import { AddbeneficiaryComponent } from './addbeneficiary/addbeneficiary.component';
@@ -14,11 +13,11 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { SetpswComponent } from './setpsw/setpsw.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { AccountStatementsComponent } from './account-statements/account-statements.component';
+import { OpenAccountComponent } from '../app/open-account/open-account.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AccountSummaryComponent,
     LoginComponent,
     FundstransferComponent,
     AddbeneficiaryComponent,
@@ -28,7 +27,8 @@ import { AccountStatementsComponent } from './account-statements/account-stateme
     NavMenuComponent,
     SetpswComponent,
     AccountDetailsComponent,
-    AccountStatementsComponent
+    AccountStatementsComponent,
+    OpenAccountComponent
   ],
   imports: [
     BrowserModule,
