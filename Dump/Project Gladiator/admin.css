@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900);
+
+
+body {
+  font: 400 13px/1.625em "Maven Pro", Helvetica, serif;
+  padding: 2%;
+  color: #555;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: auto; 
+}
+th,	td {
+	padding: 6px 8px;
+	vertical-align: top;
+    white-space: nowrap;
+}
+
+th {
+	background: #ddd;
+	font-weight: 900;
+	text-align: left;
+	white-space: nowrap;
+}
+  
+ tbody tr:nth-child(odd) {
+	background: red;
+}
+
+
