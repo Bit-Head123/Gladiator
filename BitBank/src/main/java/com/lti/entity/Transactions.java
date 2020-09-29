@@ -46,9 +46,9 @@ public class Transactions {
 	private SavingsAccount sAcc;
 
 	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "transactions",
-				joinColumns = @JoinColumn(name ="benf_id"),
-				inverseJoinColumns = {@JoinColumn(name="trans_id")})
+	@JoinTable(name = "all_transactions",
+				joinColumns = @JoinColumn(name ="trans_id"),
+				inverseJoinColumns = {@JoinColumn(name="benef_id")})
 	private Set<Beneficiaries> beneficiaries = new HashSet<Beneficiaries>();
 
 	public int getTransactionId() {

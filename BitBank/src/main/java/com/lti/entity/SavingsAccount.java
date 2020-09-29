@@ -12,6 +12,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 @Entity
 @Table(name = "savings_account")
 public class SavingsAccount extends Account {
@@ -23,7 +26,8 @@ public class SavingsAccount extends Account {
 	@JoinColumn(name = "cust_id")
 	Customer cust;
 
-	@OneToMany(mappedBy = "sAcc",cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "sAcc",cascade = {CascadeType.ALL})
+	@LazyCollection(LazyCollectionOption.FALSE)
 	private List<Transactions> transactions = new ArrayList<Transactions>();
 
 	

@@ -16,6 +16,9 @@ import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 @Entity
 @Table(name = "customers")
 @SequenceGenerator(name = "custseq", sequenceName = "seq_cust", initialValue = 15050, allocationSize = 1)
@@ -39,8 +42,9 @@ public class Customer implements Serializable {
 	
 	@OneToOne(mappedBy = "cust", cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
 	private CustomerAddress custAddress;
-
-	 @OneToMany(mappedBy = "cust",cascade = {CascadeType.ALL}, fetch =FetchType.EAGER)
+ 
+	 @LazyCollection(LazyCollectionOption.FALSE)
+	 @OneToMany(mappedBy = "cust",cascade = {CascadeType.ALL})
 	 private List<Beneficiaries> beneficiaries = new ArrayList<Beneficiaries>();
 	
 	public int getCustId() {
@@ -66,13 +70,6 @@ public class Customer implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-
-	/*
-	 * public Account getAcc() { return acc; }
-	 * 
-	 * public void setAcc(Account acc) { this.acc = acc; }
-	 */
 
 	public CustomerDetails getCustDetails() {
 		return custDetails;

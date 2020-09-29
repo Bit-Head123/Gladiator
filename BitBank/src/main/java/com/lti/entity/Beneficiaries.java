@@ -39,7 +39,7 @@ public class Beneficiaries {
 	private Customer cust;
 
 	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "transactions",
+	@JoinTable(name = "all_transactions",
 				joinColumns = @JoinColumn(name ="benef_id"),
 				inverseJoinColumns = {@JoinColumn(name="trans_id")})
 	private Set<Transactions> transactions = new HashSet<Transactions>();
