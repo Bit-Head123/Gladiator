@@ -109,8 +109,6 @@ public class Customer implements Serializable {
 				+ ", custDetails=" + custDetails + ", custAddress=" + custAddress + ", beneficiaries=" + beneficiaries
 				+ "]";
 	}
-
-	
 	
 	
 }
