@@ -20,7 +20,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "transactions")
 @SequenceGenerator(name = "transeq", sequenceName = "seq_trans", initialValue = 987654, allocationSize = 1)
-public class Transactions {
+public class Transaction {
 
 	@Id
 	@GeneratedValue(generator = "transeq", strategy = GenerationType.SEQUENCE)

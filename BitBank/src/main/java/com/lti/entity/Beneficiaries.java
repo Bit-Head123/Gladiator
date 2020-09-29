@@ -13,6 +13,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -38,11 +40,8 @@ public class Beneficiaries {
 	@JoinColumn(name = "cust_id")
 	private Customer cust;
 
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "all_transactions",
-				joinColumns = @JoinColumn(name ="benef_id"),
-				inverseJoinColumns = {@JoinColumn(name="trans_id")})
-	private Set<Transactions> transactions = new HashSet<Transactions>();
+	@OneToOne(cascade = CascadeType.ALL)
+	private Transaction transactions;
 
 	public int getBeneficiaryId() {
 		return beneficiaryId;
@@ -76,6 +75,14 @@ public class Beneficiaries {
 		this.accountNumber = accountNumber;
 	}
 
+	public Transaction getTransactions() {
+		return transactions;
+	}
+
+	public void setTransactions(Transaction transactions) {
+		this.transactions = transactions;
+	}
+
 	public Customer getCust() {
 		return cust;
 	}
@@ -84,13 +91,7 @@ public class Beneficiaries {
 		this.cust = cust;
 	}
 
-	public Set<Transactions> getTransactions() {
-		return transactions;
-	}
-
-	public void setTransactions(Set<Transactions> transactions) {
-		this.transactions = transactions;
-	}
+	
 
 
 

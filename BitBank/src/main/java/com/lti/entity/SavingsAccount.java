@@ -6,7 +6,6 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -28,7 +27,7 @@ public class SavingsAccount extends Account {
 
 	@OneToMany(mappedBy = "sAcc",cascade = {CascadeType.ALL})
 	@LazyCollection(LazyCollectionOption.FALSE)
-	private List<Transactions> transactions = new ArrayList<Transactions>();
+	private List<Transaction> transactions = new ArrayList<Transaction>();
 
 	
 	public String getAccountType() {
@@ -47,11 +46,11 @@ public class SavingsAccount extends Account {
 		this.cust = cust;
 	}
 
-	public List<Transactions> getTransactions() {
+	public List<Transaction> getTransactions() {
 		return transactions;
 	}
 
-	public void setTransactions(List<Transactions> transactions) {
+	public void setTransactions(List<Transaction> transactions) {
 		this.transactions = transactions;
 	}
 
