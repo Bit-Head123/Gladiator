@@ -1,14 +1,20 @@
 /**
  * 
- * @author Arnab
+ * @author Arnab. @version 1.0.0
  * 
- * This is an entity for beneficiaries in an account.
+ * This is an entity for beneficiary details in an account.
  * 
  * It is having ManyToOne relationship with Customer and
  * 
- * OneToOne relationship with Beneficiary
+ * OneToOne relationship with AccountTransaction
  * 
+ * 
+ * 
+ * Update:
+ * 
+ *  @author Avnv version 1.0.1
  *
+ *	Relationships are mapped and accountNumber column name is assigned
  */
 
 
@@ -29,6 +35,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -48,12 +55,16 @@ public class Beneficiary {
 	@Column(name = "last_name",length = 30)
 	private String lastName;
 
+	@Column(name = "acc_no")
 	private long  accountNumber;
 
 	@ManyToOne
 	@JoinColumn(name = "cust_id")
 	private Customer cust;
 
+	@OneToOne(mappedBy = "benef")
+	private AccountTransaction accTransaction;
+	
 	public int getBeneficiaryId() {
 		return beneficiaryId;
 	}

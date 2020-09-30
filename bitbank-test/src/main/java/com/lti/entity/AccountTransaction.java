@@ -62,7 +62,8 @@ public class AccountTransaction {
 	@JoinColumn(name = "acc_number")
 	private Customer cust;
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne
+	@JoinColumn(name = "benef_id")
 	private Beneficiary benef ;
 
 	public int getTransactionId() {
