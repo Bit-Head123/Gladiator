@@ -1,3 +1,19 @@
+/**
+ * 
+ * @author Arnab
+ * 
+ * This is an entity for beneficiaries in an account.
+ * 
+ * It is having ManyToOne relationship with Customer and
+ * 
+ * OneToOne relationship with Beneficiary
+ * 
+ *
+ */
+
+
+
+
 package com.lti.entity;
 
 import java.util.HashSet;
@@ -32,7 +48,7 @@ public class Beneficiary {
 	@Column(name = "last_name",length = 30)
 	private String lastName;
 
-	private int accountNumber;
+	private long  accountNumber;
 
 	@ManyToOne
 	@JoinColumn(name = "cust_id")

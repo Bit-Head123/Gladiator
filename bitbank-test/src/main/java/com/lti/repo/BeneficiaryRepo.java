@@ -2,7 +2,7 @@ package com.lti.repo;
 
 import java.util.List;
 
-import com.lti.entity.AccountTransaction;
+
 import com.lti.entity.Beneficiary;
 
 public interface BeneficiaryRepo {
