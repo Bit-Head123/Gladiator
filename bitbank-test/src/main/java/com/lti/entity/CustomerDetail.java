@@ -36,17 +36,17 @@ public class CustomerDetail {
 	@Column(length=6)
 	private int pincode;
 	
-//	@OneToOne
-//	@JoinColumn(name = "acc_no")
-//	private Customer cust;
-//	
-//	public Customer getCust() {
-//		return cust;
-//	}
-//
-//	public void setCust(Customer cust) {
-//		this.cust = cust;
-//	}
+	@OneToOne
+	@JoinColumn(name = "acc_no")
+	private Customer cust;
+	
+	public Customer getCust() {
+		return cust;
+	}
+
+	public void setCust(Customer cust) {
+		this.cust = cust;
+	}
 
 	public long getAadharNo() {
 		return aadharNo;
