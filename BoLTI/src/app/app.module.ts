@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
 import {RouterModule,Router} from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { SetpswComponent } from './setpsw/setpsw.component';
 import { AccountDetailsComponent } from '../app/account-details/account-details.component';
 import { AccountStatementsComponent } from '../app/account-statements/account-statements.component';
 import { OpenAccountComponent } from '../app/open-account/open-account.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -39,8 +41,9 @@ import { OpenAccountComponent } from '../app/open-account/open-account.component
     BrowserModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey:'AIzaSyDoZg2Es_GrQHZf_52j2-xZ3cTfBCR0HII'
-    }) 
+      apiKey:'AIzaSyDoZg2Es_GrQHZf_52j2-xZ3cTfBCR0HII'}),
+    HttpClientModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
